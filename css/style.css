@@ -1,0 +1,135 @@
+/*
+ * Simran Bishnoi — Portfolio Website style.css
+ * Theme: Olive & Cream (Editorial, Grounded, Premium)
+ */
+
+/* ==========================================================================
+   0. CSS Variables & Design System Tokens
+   ========================================================================== */
+:root {
+  /* Color Palette */
+  --cream: #F5F1E8;
+  --cream-alt: #EDE6D6;
+  --olive: #6B705C;
+  --olive-dark: #4A5043;
+  --sage: #A5A58D;
+  --terracotta: #B5836B;
+  --text-dark: #2E2E27;
+  --text-muted: #6E6A5E;
+  
+  /* Fonts */
+  --font-headings: 'Fraunces', Georgia, serif;
+  --font-body: 'Outfit', 'Inter', -apple-system, sans-serif;
+  
+  /* Transition / Animation Durations */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-snappy: all 0.15s ease-in-out;
+}
+
+/* ==========================================================================
+   1. Modern CSS Reset & Core Styling
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--text-dark);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headings);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--olive-dark);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-snappy);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Helper Utilities */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-padding {
+  padding: 5rem 0;
+}
+
+/* Standard Button Reset & Style */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.8rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-primary {
+  background-color: var(--olive);
+  color: var(--cream);
+}
+
+.btn-primary:hover {
+  background-color: var(--olive-dark);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--olive-dark);
+  border: 1px solid var(--sage);
+}
+
+.btn-secondary:hover {
+  background-color: var(--cream-alt);
+  transform: translateY(-2px);
+}
+
+.btn-accent {
+  background-color: var(--terracotta);
+  color: var(--cream);
+}
+
+.btn-accent:hover {
+  background-color: #A3725C; /* Darker terracotta */
+  transform: translateY(-2px);
+}
