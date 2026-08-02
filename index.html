@@ -20,14 +20,62 @@
 </head>
 <body>
   
-  <div class="container" style="text-align: center; margin-top: 20vh;">
-    <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Simran Bishnoi</h1>
-    <p style="font-size: 1.25rem; color: var(--text-muted); margin-bottom: 2rem;">B.Tech Computer Science (Data Science) | Portfolio Foundation Set Up</p>
-    <div style="display: flex; gap: 1rem; justify-content: center;">
-      <a href="#" class="btn btn-primary">Under Construction</a>
-      <a href="#" class="btn btn-secondary">Get in Touch</a>
+  <!-- Navigation Header -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo">Simran<span>.</span></a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#journey" class="nav-link">Journey</a>
+        <a href="#contact" class="nav-link btn btn-secondary btn-nav">Get in Touch</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="menu-icon"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="close-icon" style="display: none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
     </div>
-  </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">B.Tech Data Science Student</div>
+        <h1 class="hero-title">Simran Bishnoi</h1>
+        <p class="hero-tagline">Turning data into decisions. Building the future of ML, one dataset at a time.</p>
+        <p class="hero-description">
+          I'm a B.Tech Computer Science (Data Science) student at VIT Vellore, currently building a solid foundation in Machine Learning, SQL, and core CS fundamentals. I like turning messy data into something usable — and I'm documenting that journey publicly.
+        </p>
+        <div class="hero-actions">
+          <a href="#journey" class="btn btn-primary">View Journey &amp; Streaks</a>
+          <a href="#projects" class="btn btn-secondary">Explore Projects</a>
+          <a href="https://www.linkedin.com/in/simran-bishnoi-" target="_blank" rel="noopener noreferrer" class="btn btn-accent">LinkedIn Profile</a>
+        </div>
+      </div>
+      <div class="hero-illustration">
+        <!-- Modern abstract decorative container -->
+        <div class="abstract-shape shape-1"></div>
+        <div class="abstract-shape shape-2"></div>
+        <div class="abstract-card">
+          <div class="card-header">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+          <div class="card-body">
+            <pre><code><span class="keyword">import</span> pandas <span class="keyword">as</span> pd
+<span class="keyword">import</span> numpy <span class="keyword">as</span> np
+
+<span class="comment"># Active Streaks</span>
+sql_streak = <span class="number">50</span>  <span class="comment"># Solved</span>
+dsa_streak = <span class="keyword">True</span> <span class="comment"># Ongoing</span>
+
+print(<span class="string">"Ready to build..."</span>)</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
