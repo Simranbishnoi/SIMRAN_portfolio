@@ -939,5 +939,334 @@ ul {
   }
 }
 
+/* ==========================================================================
+   11. Featured Projects Section Styling
+   ========================================================================== */
+.projects {
+  background-color: var(--cream);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background-color: var(--cream-alt);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(165, 165, 141, 0.2);
+  box-shadow: 0 4px 20px rgba(74, 80, 67, 0.02);
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(74, 80, 67, 0.07);
+  border-color: var(--sage);
+}
+
+.project-image-placeholder {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.project-card:hover .project-svg {
+  transform: scale(1.05);
+}
+
+.project-category {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: rgba(46, 46, 39, 0.85); /* Glassmorphic dark badge */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: var(--cream);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.35rem 0.8rem;
+  border-radius: 50px;
+  border: 1px solid rgba(245, 241, 232, 0.1);
+}
+
+.project-body {
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--olive-dark);
+  margin-bottom: 0.8rem;
+}
+
+.project-description {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.project-learnings {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  background-color: rgba(165, 165, 141, 0.15);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border-left: 3px solid var(--olive);
+}
+
+.project-learnings strong {
+  color: var(--olive-dark);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.project-tag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--olive-dark);
+  background-color: var(--cream);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  border: 1px solid rgba(165, 165, 141, 0.2);
+}
+
+.project-links {
+  margin-top: auto;
+  display: flex;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--terracotta);
+  transition: var(--transition-snappy);
+}
+
+.project-link:hover {
+  color: var(--olive-dark);
+}
+
+/* ==========================================================================
+   12. Journey / Progress Section Styling
+   ========================================================================== */
+.journey {
+  background-color: var(--cream-alt);
+}
+
+.journey-dashboard {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.dashboard-banner {
+  background-color: var(--olive-dark);
+  color: var(--cream);
+  border-radius: 16px;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 10px 30px rgba(74, 80, 67, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  width: 50%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(245, 241, 232, 0.05) 0%, transparent 60%);
+  transform: rotate(-30deg);
+  pointer-events: none;
+}
+
+.banner-badge {
+  display: inline-block;
+  background-color: var(--terracotta);
+  color: var(--cream);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  margin-bottom: 1.2rem;
+}
+
+.dashboard-banner h3 {
+  font-family: var(--font-headings);
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 400;
+  line-height: 1.4;
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--cream);
+}
+
+.journey-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.journey-card {
+  background-color: var(--cream);
+  border-radius: 16px;
+  padding: 2.5rem;
+  border: 1px solid rgba(165, 165, 141, 0.2);
+  box-shadow: 0 4px 15px rgba(74, 80, 67, 0.02);
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+}
+
+.journey-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(74, 80, 67, 0.08);
+  border-color: var(--sage);
+}
+
+.journey-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.journey-card-header .card-icon {
+  font-size: 1.8rem;
+}
+
+.journey-card-header .card-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--terracotta);
+  background-color: rgba(181, 131, 107, 0.12);
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stat-number-large {
+  font-family: var(--font-headings);
+  font-size: clamp(3.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  color: var(--terracotta);
+  line-height: 1;
+  margin-bottom: 0.8rem;
+}
+
+.journey-card-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--olive-dark);
+  margin-bottom: 0.8rem;
+}
+
+.journey-card-description {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.5;
+  margin-bottom: 1.8rem;
+}
+
+.dsa-topics-mastered {
+  margin-bottom: 2rem;
+  background-color: var(--cream-alt);
+  padding: 1.2rem;
+  border-radius: 8px;
+}
+
+.dsa-topics-mastered strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--olive-dark);
+  margin-bottom: 0.6rem;
+}
+
+.topic-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.topic-tags span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: var(--cream);
+  color: var(--olive);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid rgba(165, 165, 141, 0.15);
+}
+
+.journey-card-footer {
+  margin-top: auto;
+}
+
+/* ==========================================================================
+   13. Responsive Media Queries (Projects & Journey)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .project-card {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .journey-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .journey-card {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  
+  .dashboard-banner {
+    padding: 2rem 1.5rem;
+  }
+}
+
+
 
 
