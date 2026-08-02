@@ -1267,6 +1267,294 @@ ul {
   }
 }
 
+/* ==========================================================================
+   14. Certifications & Roadmap Section Styling
+   ========================================================================== */
+.roadmap-certs {
+  background-color: var(--cream);
+}
+
+.roadmap-certs-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.certs-list {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.cert-card {
+  background-color: var(--cream-alt);
+  border-radius: 12px;
+  padding: 1.8rem;
+  display: flex;
+  gap: 1.2rem;
+  border: 1px solid rgba(165, 165, 141, 0.2);
+  box-shadow: 0 4px 15px rgba(74, 80, 67, 0.02);
+  transition: var(--transition-smooth);
+}
+
+.cert-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(74, 80, 67, 0.06);
+  border-color: var(--sage);
+}
+
+.cert-icon {
+  font-size: 1.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: var(--cream);
+  border-radius: 50%;
+  border: 1px solid rgba(165, 165, 141, 0.2);
+  flex-shrink: 0;
+}
+
+.cert-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--olive-dark);
+  margin-bottom: 0.2rem;
+}
+
+.cert-issuer {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--terracotta);
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cert-description {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Roadmap List */
+.roadmap-subtitle {
+  font-family: var(--font-headings);
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  margin-bottom: 2.2rem;
+}
+
+.roadmap-list {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.roadmap-list::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  width: 2px;
+  height: calc(100% - 30px);
+  background-color: var(--sage);
+  opacity: 0.4;
+}
+
+.roadmap-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.roadmap-item:last-child {
+  margin-bottom: 0;
+}
+
+.roadmap-marker {
+  position: absolute;
+  left: -2rem;
+  top: 6px;
+  transform: translateX(-2px);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--cream);
+  border: 3px solid var(--sage);
+  z-index: 2;
+  transition: var(--transition-smooth);
+}
+
+.roadmap-item:hover .roadmap-marker {
+  border-color: var(--terracotta);
+  background-color: var(--terracotta);
+}
+
+.roadmap-info h4 {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--olive-dark);
+  margin-bottom: 0.4rem;
+}
+
+.roadmap-info p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   15. Contact & Footer Styling
+   ========================================================================== */
+.footer {
+  background-color: var(--olive-dark);
+  color: rgba(245, 241, 232, 0.75);
+  padding: 5rem 0 2rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1fr;
+  gap: 4rem;
+  border-bottom: 1px solid rgba(245, 241, 232, 0.1);
+  padding-bottom: 4rem;
+}
+
+.footer-logo {
+  font-family: var(--font-headings);
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--cream);
+  margin-bottom: 0.5rem;
+}
+
+.footer-logo span {
+  color: var(--terracotta);
+}
+
+.footer-tagline {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(245, 241, 232, 0.55);
+  margin-bottom: 1.2rem;
+}
+
+.footer-location {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.footer-contact-details {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.footer-contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: rgba(245, 241, 232, 0.85);
+  transition: var(--transition-snappy);
+}
+
+.footer-contact-link:hover {
+  color: var(--cream);
+  text-decoration: underline;
+}
+
+.footer-title {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(245, 241, 232, 0.45);
+  margin-bottom: 1.8rem;
+}
+
+.footer-nav-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.footer-nav-list a {
+  font-size: 0.95rem;
+  color: rgba(245, 241, 232, 0.75);
+}
+
+.footer-nav-list a:hover {
+  color: var(--cream);
+  transform: translateX(3px);
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(245, 241, 232, 0.05);
+  color: var(--cream);
+  transition: var(--transition-smooth);
+  border: 1px solid rgba(245, 241, 232, 0.1);
+}
+
+.social-icons a:hover {
+  background-color: var(--terracotta);
+  color: var(--cream);
+  border-color: var(--terracotta);
+  transform: translateY(-3px);
+}
+
+.footer-experience {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: rgba(245, 241, 232, 0.55);
+}
+
+.footer-bottom {
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(245, 241, 232, 0.45);
+}
+
+/* ==========================================================================
+   16. Responsive Media Queries (Roadmap & Footer)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .roadmap-certs-container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  .footer {
+    padding: 4rem 0 2rem;
+  }
+}
+
 
 
 
