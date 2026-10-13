@@ -121,7 +121,7 @@ print(<span class="string">"Ready to build..."</span>)</code></pre>
             <span class="stat-label">SQL Solved</span>
           </div>
           <div class="stat-box">
-            <span class="stat-number">4+</span>
+            <span class="stat-number">6+</span>
             <span class="stat-label">Active Repos</span>
           </div>
         </div>
@@ -149,7 +149,7 @@ print(<span class="string">"Ready to build..."</span>)</code></pre>
               <span class="detail-text">VIT Vellore (Class of '28)</span>
             </div>
           </div>
-          <a href="assets/simresume (1).pdf" class="btn btn-accent btn-full">Download Resume</a>
+          <a href="assets/Simran_Bishnoi_Resume.pdf" class="btn btn-accent btn-full" target="_blank" rel="noopener noreferrer" download>Download Resume</a>
         </div>
       </div>
     </div>
@@ -246,14 +246,16 @@ print(<span class="string">"Ready to build..."</span>)</code></pre>
           </div>
         </div>
 
-        <!-- EDA & Simulation Tools -->
+        <!-- Backend & APIs -->
         <div class="skills-card">
-          <div class="skills-card-icon">⚙️</div>
-          <h3 class="skills-card-title">EDA &amp; Simulation</h3>
+          <div class="skills-card-icon">⚡</div>
+          <h3 class="skills-card-title">Backend &amp; APIs</h3>
           <div class="skills-list">
-            <span class="skill-badge">MATLAB</span>
-            <span class="skill-badge">ORCAD PSpice</span>
-            <span class="skill-badge">ModelSim / VSIM</span>
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">FastAPI</span>
+            <span class="skill-badge">SQLAlchemy</span>
+            <span class="skill-badge">PostgreSQL</span>
+            <span class="skill-badge">REST APIs</span>
           </div>
         </div>
 
@@ -303,7 +305,165 @@ print(<span class="string">"Ready to build..."</span>)</code></pre>
       </div>
 
       <div class="projects-grid">
-        <!-- Project 1: Orders Data Cleaning -->
+        <!-- Project 1: TerraWatch -->
+        <div class="project-card">
+          <div class="project-image-placeholder">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="project-svg" aria-label="TerraWatch Satellite and Land Boundary Visualization">
+              <!-- Deep Earth & Forest background -->
+              <rect width="100" height="100" fill="var(--olive-dark)" />
+              
+              <!-- Geospatial coordinate grid -->
+              <line x1="0" y1="25" x2="100" y2="25" stroke="var(--olive)" stroke-width="0.8" opacity="0.35" />
+              <line x1="0" y1="50" x2="100" y2="50" stroke="var(--olive)" stroke-width="0.8" opacity="0.35" />
+              <line x1="0" y1="75" x2="100" y2="75" stroke="var(--olive)" stroke-width="0.8" opacity="0.35" />
+              <line x1="25" y1="0" x2="25" y2="100" stroke="var(--olive)" stroke-width="0.8" opacity="0.35" />
+              <line x1="50" y1="0" x2="50" y2="100" stroke="var(--olive)" stroke-width="0.8" opacity="0.35" />
+              <line x1="75" y1="0" x2="75" y2="100" stroke="var(--olive)" stroke-width="0.8" opacity="0.35" />
+
+              <!-- Land boundary / farm polygons (Vegetation zone) -->
+              <polygon points="12,38 46,28 58,62 22,78" fill="var(--olive)" opacity="0.9" stroke="var(--sage)" stroke-width="1.5" />
+              <polygon points="46,28 88,18 92,54 58,62" fill="var(--sage)" opacity="0.55" stroke="var(--sage)" stroke-width="1.5" />
+              
+              <!-- Deforested / anomaly hotspot polygon -->
+              <polygon points="30,46 48,40 54,55 36,63" fill="var(--terracotta)" opacity="0.92" stroke="var(--cream)" stroke-width="1.2" stroke-dasharray="2 1" />
+              
+              <!-- Satellite radar scan beam projection -->
+              <polygon points="76,14 26,48 58,66" fill="var(--cream)" opacity="0.12" />
+              
+              <!-- Radar scan pulses over hotspot -->
+              <circle cx="42" cy="51" r="7" fill="none" stroke="var(--terracotta)" stroke-width="1" opacity="0.85" />
+              <circle cx="42" cy="51" r="15" fill="none" stroke="var(--terracotta)" stroke-width="0.8" stroke-dasharray="3 2" opacity="0.5" />
+              <circle cx="42" cy="51" r="2.5" fill="var(--terracotta)" />
+
+              <!-- Sentinel-2 Satellite in orbit -->
+              <g transform="translate(76, 14) rotate(25)">
+                <!-- Solar panel wings -->
+                <rect x="-11" y="-3.5" width="8" height="7" fill="var(--sage)" rx="1" stroke="var(--cream)" stroke-width="0.5" />
+                <rect x="3" y="-3.5" width="8" height="7" fill="var(--sage)" rx="1" stroke="var(--cream)" stroke-width="0.5" />
+                <!-- Solar panel grid marks -->
+                <line x1="-7" y1="-3.5" x2="-7" y2="3.5" stroke="var(--olive-dark)" stroke-width="0.6" />
+                <line x1="7" y1="-3.5" x2="7" y2="3.5" stroke="var(--olive-dark)" stroke-width="0.6" />
+                <!-- Main satellite bus -->
+                <rect x="-3" y="-4.5" width="6" height="9" rx="1.5" fill="var(--cream)" />
+                <!-- Sensor lens payload -->
+                <circle cx="0" cy="5" r="2.2" fill="var(--terracotta)" />
+              </g>
+            </svg>
+            <div class="project-category">AI &amp; Geospatial Intelligence</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">TerraWatch</h3>
+            <p class="project-subtitle">AI-Powered Deforestation Detection and Verification Platform</p>
+            <p class="project-description">
+              Developed an AI-powered platform for detecting deforestation, monitoring vegetation changes, and identifying suspicious land-boundary activity using satellite imagery. The project integrates Google Earth Engine and Sentinel-2 satellite data for geospatial analysis, NDVI-based vegetation assessment, and historical image comparison.
+            </p>
+            <div class="project-learnings">
+              <strong>Architecture &amp; Pipeline:</strong> The backend is built using Python and FastAPI, with PostgreSQL for database management and React.js for the frontend. Mapbox supports interactive mapping and visualization of farm boundaries and affected areas. The machine-learning pipeline integrates satellite image preprocessing, vegetation detection, change detection, and fraud-risk classification to support deforestation monitoring and environmental compliance verification.
+            </div>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">FastAPI</span>
+              <span class="project-tag">React.js</span>
+              <span class="project-tag">PostgreSQL</span>
+              <span class="project-tag">Google Earth Engine</span>
+              <span class="project-tag">Sentinel-2</span>
+              <span class="project-tag">Mapbox</span>
+              <span class="project-tag">NDVI Assessment</span>
+              <span class="project-tag">Machine Learning</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Simranbishnoi/TerraWatch.git" target="_blank" rel="noopener noreferrer"
+                class="project-link">
+                View Repository
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                  </path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: SwizzBank -->
+        <div class="project-card">
+          <div class="project-image-placeholder">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="project-svg" aria-label="SwizzBank Security Vault and Transaction Ledger">
+              <!-- Deep Olive background -->
+              <rect width="100" height="100" fill="var(--olive-dark)" />
+              
+              <!-- Subtle grid pattern -->
+              <line x1="0" y1="20" x2="100" y2="20" stroke="var(--olive)" stroke-width="0.8" opacity="0.35" />
+              <line x1="0" y1="50" x2="100" y2="50" stroke="var(--olive)" stroke-width="0.8" opacity="0.35" />
+              <line x1="0" y1="80" x2="100" y2="80" stroke="var(--olive)" stroke-width="0.8" opacity="0.35" />
+              <line x1="20" y1="0" x2="20" y2="100" stroke="var(--olive)" stroke-width="0.8" opacity="0.35" />
+              <line x1="50" y1="0" x2="50" y2="100" stroke="var(--olive)" stroke-width="0.8" opacity="0.35" />
+              <line x1="80" y1="0" x2="80" y2="100" stroke="var(--olive)" stroke-width="0.8" opacity="0.35" />
+
+              <!-- Bank / Vault circular boundary portal -->
+              <circle cx="50" cy="50" r="34" fill="none" stroke="var(--sage)" stroke-width="2" opacity="0.6" />
+              <circle cx="50" cy="50" r="28" fill="var(--olive)" opacity="0.45" stroke="var(--cream)" stroke-width="1.2" stroke-dasharray="3 3" />
+              
+              <!-- Relational database cylinder stack (Left) -->
+              <ellipse cx="26" cy="65" rx="12" ry="4" fill="var(--sage)" opacity="0.4" />
+              <path d="M14 65 v9 c0 2.2 5.4 4 12 4 s12 -1.8 12 -4 v-9" fill="var(--olive)" stroke="var(--cream)" stroke-width="0.8" />
+              <ellipse cx="26" cy="65" rx="12" ry="4" fill="var(--cream-alt)" stroke="var(--cream)" stroke-width="0.8" />
+
+              <!-- Central Security Shield Emblem -->
+              <path d="M50 30 L66 36 V52 C66 63 50 71 50 71 C50 71 34 63 34 52 V36 Z" fill="var(--cream)" stroke="var(--sage)" stroke-width="1.5" />
+              <path d="M50 33 L63 38 V51 C63 59 50 66 50 66 C50 66 37 59 37 51 V38 Z" fill="var(--cream-alt)" />
+              
+              <!-- Vault Lock / Currency Node -->
+              <circle cx="50" cy="48" r="4.5" fill="var(--terracotta)" />
+              <rect x="47.5" y="48" width="5" height="7" rx="1" fill="var(--terracotta)" />
+              <path d="M46.5 48 v-2.5 a3.5 3.5 0 0 1 7 0 v2.5" fill="none" stroke="var(--olive-dark)" stroke-width="1.3" stroke-linecap="round" />
+
+              <!-- Transaction flow pulse nodes & transfer vectors -->
+              <circle cx="76" cy="32" r="3.5" fill="var(--terracotta)" opacity="0.9" />
+              <path d="M66 36 L72 33" stroke="var(--terracotta)" stroke-width="1.2" stroke-linecap="round" />
+              <line x1="68" y1="58" x2="82" y2="64" stroke="var(--cream)" stroke-width="1.2" stroke-dasharray="2 2" />
+              <circle cx="83" cy="64.5" r="2.8" fill="var(--cream)" />
+            </svg>
+            <div class="project-category">Full-Stack &amp; Financial Systems</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">SwizzBank</h3>
+            <p class="project-subtitle">Full-Stack Banking Management System</p>
+            <p class="project-description">
+              Developed a banking management application to manage bank accounts, deposits, withdrawals, balance inquiries, and transaction history. Designed a relational PostgreSQL database to store account information and transaction records, with primary keys, foreign key relationships, and integrity constraints.
+            </p>
+            <div class="project-learnings">
+              <strong>Architecture &amp; Reliability:</strong> Built a Python backend using FastAPI and SQLAlchemy to expose REST APIs and connect application logic to PostgreSQL, with a JavaScript and React frontend for account management and transaction tracking. Implemented input validation, exception handling, and automated testing (pytest, JUnit, Maven) to improve reliability and maintain data consistency.
+            </div>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">FastAPI</span>
+              <span class="project-tag">React</span>
+              <span class="project-tag">PostgreSQL</span>
+              <span class="project-tag">SQLAlchemy</span>
+              <span class="project-tag">REST APIs</span>
+              <span class="project-tag">Java</span>
+              <span class="project-tag">pytest</span>
+              <span class="project-tag">JUnit</span>
+              <span class="project-tag">Maven</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Simranbishnoi/SwizzBank.git" target="_blank" rel="noopener noreferrer"
+                class="project-link">
+                View Repository
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                  </path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Orders Data Cleaning -->
         <div class="project-card">
           <div class="project-image-placeholder">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="project-svg">
@@ -345,7 +505,7 @@ print(<span class="string">"Ready to build..."</span>)</code></pre>
           </div>
         </div>
 
-        <!-- Project 2: GamingHub -->
+        <!-- Project 4: GamingHub -->
         <div class="project-card">
           <div class="project-image-placeholder">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="project-svg">
